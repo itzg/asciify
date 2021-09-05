@@ -1,0 +1,1 @@
+Very simple utility that reads a UTF-8 string on the standard input and replaces non-ASCII characters with a `\u` unicode escape.
