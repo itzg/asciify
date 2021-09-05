@@ -13,6 +13,10 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <scm>
+        <developerConnection>scm:git:git@github.com:itzg/asciify.git</developerConnection>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
@@ -25,6 +29,15 @@
                             <mainClass>me.itzg.Asciify</mainClass>
                         </manifest>
                     </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
         </plugins>
